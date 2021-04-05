@@ -49,16 +49,12 @@ class Onboarding extends StatefulWidget {
   ///Add a proceeding button [required] after the user reaches the end of the last page in the [pages] you provided
   final ProceedButtonStyle proceedButtonStyle;
 
-  ///Define a widget to use to display your image asset, network or local.
-  final Widget imageWidget;
-
   const Onboarding({
     Key key,
     this.background = const Color.fromARGB(255, 35, 35, 35),
     @required this.pages,
     @required this.indicator,
     @required this.proceedButtonStyle,
-    @required this.imageWidget,
     this.skipButtonStyle = const SkipButtonStyle(),
     this.footerPadding =
         const EdgeInsets.only(left: 45.0, right: 45.0, bottom: 45.0),
@@ -224,7 +220,6 @@ class _OnboardingState extends State<Onboarding> with TickerProviderStateMixin {
         titleStyle: widget.titleStyle,
         infoStyle: widget.infoStyle,
         infoPadding: widget.infoPadding,
-        imageWidget: widget.imageWidget,
       );
     }).toList();
   }
