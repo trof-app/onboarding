@@ -15,22 +15,24 @@ class OnboardPage extends StatelessWidget {
   final TextStyle titleStyle;
   final TextStyle infoStyle;
   final EdgeInsets infoPadding;
+  final Widget imageWidget;
 
-  const OnboardPage({
-    Key key,
-    this.pageModel,
-    this.background,
-    this.index,
-    this.pagesLength,
-    this.dragPercent,
-    this.pagesPadding,
-    this.pagesImageColor,
-    this.titleAndInfoPadding,
-    this.titleAndInfoHeight,
-    this.titleStyle,
-    this.infoStyle,
-    this.infoPadding,
-  }) : super(key: key);
+  const OnboardPage(
+      {Key key,
+      this.pageModel,
+      this.background,
+      this.index,
+      this.pagesLength,
+      this.dragPercent,
+      this.pagesPadding,
+      this.pagesImageColor,
+      this.titleAndInfoPadding,
+      this.titleAndInfoHeight,
+      this.titleStyle,
+      this.infoStyle,
+      this.infoPadding,
+      this.imageWidget})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     final singlePageScrollPercentage = dragPercent / (1 / pagesLength);
@@ -45,10 +47,7 @@ class OnboardPage extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: Image.asset(
-                pageModel.assetPath,
-                color: pagesImageColor,
-              ),
+              child: imageWidget,
             ),
             Container(
               padding: titleAndInfoPadding,

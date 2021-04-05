@@ -8,22 +8,34 @@ void main() {
 class MyApp extends StatelessWidget {
   final onboardingPagesList = [
     PageModel(
-      assetPath: 'assets/images/facebook.png',
+      imageWidget: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/facebook.png')))),
       title: 'SECURED BACKUP',
       info: "Keep your files in closed safe so you can't lose them",
     ),
     PageModel(
-      assetPath: 'assets/images/twitter.png',
+      imageWidget: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/facebook.png')))),
       title: 'CHANGE AND RISE',
       info: 'Give others access to any file or folder you choose',
     ),
     PageModel(
-      assetPath: 'assets/images/instagram.png',
+      imageWidget: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/facebook.png')))),
       title: 'EASY ACCESS',
       info: 'Reach your files anytime from any devices anywhere',
     ),
     PageModel(
-      assetPath: 'assets/images/twitter.png',
+      imageWidget: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/facebook.png')))),
       title: 'SHARE AND SHINE',
       info: 'Give others access to any file or folder you choose',
     ),
